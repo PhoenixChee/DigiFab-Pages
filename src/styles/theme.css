@@ -1,0 +1,65 @@
+:root {
+  --color-primary: theme("colors.pink.500");
+  --color-secondary: theme("colors.indigo.500");
+  --color-text: theme("colors.gray.900");
+  --color-text-offset: theme("colors.gray.600");
+  --color-background: theme("colors.gray.50");
+  --color-background-offset: theme("colors.gray.100");
+  --color-border: theme("colors.gray.900" / 10%);
+}
+
+.light {
+  --color-primary: theme("colors.pink.500");
+  --color-secondary: theme("colors.indigo.500");
+  --color-text: theme("colors.gray.900");
+  --color-text-offset: theme("colors.gray.600");
+  --color-background: theme("colors.gray.50");
+  --color-background-offset: theme("colors.gray.100");
+  --color-border: theme("colors.gray.900" / 10%);
+}
+
+.dark {
+  --color-primary: theme("colors.pink.400");
+  --color-secondary: theme("colors.indigo.400");
+  --color-text: theme("colors.gray.50");
+  --color-text-offset: theme("colors.gray.400");
+  --color-background: theme("colors.gray.900");
+  --color-background-offset: theme("colors.gray.800");
+  --color-border: theme("colors.gray.50" / 10%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  padding: 0 0.5rem;
+  transition: all 0.1s ease-in-out;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h1 + h2 {
+  font-size: 1.1rem;
+  margin-top: -1.4rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+main {
+  max-width: 40rem;
+  margin: auto;
+}
+
+p,
+li {
+  font-size: 1rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+li {
+  margin: 1rem 0;
+}

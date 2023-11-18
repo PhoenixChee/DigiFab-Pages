@@ -1,0 +1,28 @@
+---
+import ToggleTheme from "./ToggleTheme.astro";
+import { Icon } from 'astro-icon'
+---
+
+<nav class="relative w-full flex items-center justify-between">
+  <Icon name="ion:paper-plane" class="block w-6 h-6"/>
+  <ul class="flex sm:justify-between">
+    {[
+      ['Home', '/'],
+      ['Philosophies', '/philosophies'],
+      ['Beyond Tech', '/beyond-tech'],
+      ['Projects', '/projects'],
+    ].map(([title, url]) => (
+      <a href={url} class="rounded-lg px-3 py-2 text-zinc-700 dark:text-white font-medium hover:bg-slate-100 hover:text-slate-900">{title}</a>
+    ))}
+  </ul>
+  <ToggleTheme/>
+<nav/>
+
+<script>
+  const { pathname } = window.location;
+  const activeNavigationElement = document.querySelector(`nav a[href="${pathname}"]`);
+
+  if (activeNavigationElement) {
+    activeNavigationElement.classList.add("active");
+  }
+</script>
